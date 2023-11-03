@@ -17,6 +17,7 @@
 		DF82019C2AF0D44C00F92151 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82019B2AF0D44C00F92151 /* SearchViewController.swift */; };
 		DF82019E2AF0D4EB00F92151 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82019D2AF0D4EB00F92151 /* DownloadsViewController.swift */; };
 		DF8201A52AF0E05D00F92151 /* CollecitonViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8201A42AF0E05D00F92151 /* CollecitonViewTableViewCell.swift */; };
+		DF8201A72AF2FD5C00F92151 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8201A62AF2FD5C00F92151 /* HeroHeaderUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		DF82019B2AF0D44C00F92151 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DF82019D2AF0D4EB00F92151 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
 		DF8201A42AF0E05D00F92151 /* CollecitonViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollecitonViewTableViewCell.swift; sourceTree = "<group>"; };
+		DF8201A62AF2FD5C00F92151 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				DF8201A42AF0E05D00F92151 /* CollecitonViewTableViewCell.swift */,
+				DF8201A62AF2FD5C00F92151 /* HeroHeaderUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				DF82019C2AF0D44C00F92151 /* SearchViewController.swift in Sources */,
 				DF8201862AF0D16100F92151 /* MainTabBarViewController.swift in Sources */,
 				DF8201A52AF0E05D00F92151 /* CollecitonViewTableViewCell.swift in Sources */,
+				DF8201A72AF2FD5C00F92151 /* HeroHeaderUIView.swift in Sources */,
 				DF82019E2AF0D4EB00F92151 /* DownloadsViewController.swift in Sources */,
 				DF8201822AF0D16100F92151 /* AppDelegate.swift in Sources */,
 				DF8201842AF0D16100F92151 /* SceneDelegate.swift in Sources */,
