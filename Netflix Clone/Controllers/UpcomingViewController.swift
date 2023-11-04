@@ -36,7 +36,6 @@ class UpcomingViewController: UIViewController {
         super.viewDidLayoutSubviews()
         
         upcomingTable.frame = view.bounds
-        
     }
     
     private func fetchUpcoming() {
