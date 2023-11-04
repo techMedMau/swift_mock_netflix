@@ -1,5 +1,5 @@
 //
-//  Tv.swift
+//  Movie.swift
 //  Netflix Clone
 //
 //  Created by Maureen Chang on 2023/11/3.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct TrendingTvResponse: Codable {
-    let results: [Tv]
+struct TMDBResponse: Codable {
+    let results: [TMDBObject]
 }
 
-struct Tv: Codable {
+struct TMDBObject: Codable {
     let id: Int
     let media_type: String?
     let original_name: String?
