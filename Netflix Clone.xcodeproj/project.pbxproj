@@ -26,6 +26,7 @@
 		DF8201B62AF62A4400F92151 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DF8201B52AF62A4400F92151 /* SDWebImageMapKit */; };
 		DF8201B82AF6D41100F92151 /* TMDBObejectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8201B72AF6D41100F92151 /* TMDBObejectTableViewCell.swift */; };
 		DF8201BA2AF6DA0F00F92151 /* TMDBObjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8201B92AF6DA0F00F92151 /* TMDBObjectViewModel.swift */; };
+		DF8201BC2AF6EE8D00F92151 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8201BB2AF6EE8D00F92151 /* SearchResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		DF8201B02AF628E500F92151 /* TMDBCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBCollectionViewCell.swift; sourceTree = "<group>"; };
 		DF8201B72AF6D41100F92151 /* TMDBObejectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBObejectTableViewCell.swift; sourceTree = "<group>"; };
 		DF8201B92AF6DA0F00F92151 /* TMDBObjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBObjectViewModel.swift; sourceTree = "<group>"; };
+		DF8201BB2AF6EE8D00F92151 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +92,6 @@
 				DF8201952AF0D38A00F92151 /* Controllers */,
 				DF8201812AF0D16100F92151 /* AppDelegate.swift */,
 				DF8201832AF0D16100F92151 /* SceneDelegate.swift */,
-				DF8201852AF0D16100F92151 /* MainTabBarViewController.swift */,
 				DF82018A2AF0D16300F92151 /* Assets.xcassets */,
 				DF82018C2AF0D16300F92151 /* LaunchScreen.storyboard */,
 				DF82018F2AF0D16300F92151 /* Info.plist */,
@@ -101,10 +102,8 @@
 		DF8201952AF0D38A00F92151 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DF8201962AF0D3C700F92151 /* HomeViewController.swift */,
-				DF8201982AF0D41800F92151 /* UpcomingViewController.swift */,
-				DF82019B2AF0D44C00F92151 /* SearchViewController.swift */,
-				DF82019D2AF0D4EB00F92151 /* DownloadsViewController.swift */,
+				DF8201BE2AF6EEED00F92151 /* General */,
+				DF8201BD2AF6EEB200F92151 /* Core */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -150,6 +149,26 @@
 				DF8201A82AF5DFFC00F92151 /* APICaller.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		DF8201BD2AF6EEB200F92151 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DF8201962AF0D3C700F92151 /* HomeViewController.swift */,
+				DF8201982AF0D41800F92151 /* UpcomingViewController.swift */,
+				DF82019B2AF0D44C00F92151 /* SearchViewController.swift */,
+				DF8201852AF0D16100F92151 /* MainTabBarViewController.swift */,
+				DF82019D2AF0D4EB00F92151 /* DownloadsViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DF8201BE2AF6EEED00F92151 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				DF8201BB2AF6EE8D00F92151 /* SearchResultsViewController.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +257,7 @@
 				DF8201A72AF2FD5C00F92151 /* HeroHeaderUIView.swift in Sources */,
 				DF8201BA2AF6DA0F00F92151 /* TMDBObjectViewModel.swift in Sources */,
 				DF82019E2AF0D4EB00F92151 /* DownloadsViewController.swift in Sources */,
+				DF8201BC2AF6EE8D00F92151 /* SearchResultsViewController.swift in Sources */,
 				DF8201822AF0D16100F92151 /* AppDelegate.swift in Sources */,
 				DF8201AD2AF61A4D00F92151 /* Extensions.swift in Sources */,
 				DF8201842AF0D16100F92151 /* SceneDelegate.swift in Sources */,

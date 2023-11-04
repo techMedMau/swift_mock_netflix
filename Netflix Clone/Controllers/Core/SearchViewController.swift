@@ -16,19 +16,29 @@ class SearchViewController: UIViewController {
         table.register(TMDBObejectTableViewCell.self, forCellReuseIdentifier: TMDBObejectTableViewCell.identifier)
         return table
     }()
-
+    
+    private let searchController: UISearchController = {
+        let controller = UISearchController(searchResultsController: SearchResultsViewController())
+        controller.searchBar.placeholder = "Search for a movie or a tv show"
+        controller.searchBar.searchBarStyle = .minimal
+        return controller
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .systemBackground
         title = "Search"
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.topItem?.largeTitleDisplayMode = .always
         
         view.addSubview(discoverTable)
         
         discoverTable.delegate = self
         discoverTable.dataSource = self
+        
+        navigationItem.searchController = searchController
         
         fetchDiscoverMovies()
     }
