@@ -32,8 +32,10 @@ class TMDBCollectionViewCell: UICollectionViewCell {
     }
     
 //        third party library -> SDWebImage
-    public func configure(with model: String) {
-        guard let url = URL(string: model) else {return}
+    public func configure(with image: String) {
+        
+        guard let url = URL(string: "https://image.tmdb.org/t/p/w500/\(image)") else { return }
+        
         posterImageView.sd_setImage(with: url, completed: nil)
     }
 }
