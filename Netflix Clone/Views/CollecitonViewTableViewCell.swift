@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol CollectionViewTableViewCellDelegate: AnyObject {
+    func collectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: TMDBObjectPreviewViewModel)
+}
+
 class CollectionViewTableViewCell: UITableViewCell {
 
     static let identifier = "CollecitonViewTableViewCell"
+    
+    weak var delegate: CollectionViewTableViewCellDelegate?
     
     private var TMDBObjects: [TMDBObject] = [TMDBObject]()
     
@@ -66,13 +72,17 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
-        let title = TMDBObjects[indexPath.row]
-        guard let titleName = title.original_title ?? title.original_name else { return }
+        let TMDBObject = TMDBObjects[indexPath.row]
+        guard let TMDBObjectName = TMDBObject.original_title ?? TMDBObject.original_name else { return }
         
-        APICaller.shared.getMovie(with: titleName + " trailer") { result in
+        APICaller.shared.getMovie(with: TMDBObjectName + " trailer") { [weak self] result in
             switch result {
             case .success(let videoElemnet):
-                print(videoElemnet.id)
+                let TMDBObject = self?.TMDBObjects[indexPath.row]
+                guard let TMDBObjectOverview = TMDBObject?.overview else { return }
+                guard let strongSelf = self else { return }
+                let viewModel = TMDBObjectPreviewViewModel(title: TMDBObjectName, youtubeView: videoElemnet, tileOverview: TMDBObjectOverview)
+                self?.delegate?.collectionViewTableViewCellDidTapCell(strongSelf, viewModel: viewModel)
             case .failure(let error):
                 print(error.localizedDescription)
             }

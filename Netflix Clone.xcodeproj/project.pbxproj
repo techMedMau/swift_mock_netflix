@@ -28,6 +28,8 @@
 		DF8201BA2AF6DA0F00F92151 /* TMDBObjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8201B92AF6DA0F00F92151 /* TMDBObjectViewModel.swift */; };
 		DF8201BC2AF6EE8D00F92151 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8201BB2AF6EE8D00F92151 /* SearchResultsViewController.swift */; };
 		DFEA4F1A2AF97D2F00982244 /* YoutubeSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEA4F192AF97D2F00982244 /* YoutubeSearchResponse.swift */; };
+		DFEA4F1E2AF98BD900982244 /* TMDBObjectPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEA4F1D2AF98BD900982244 /* TMDBObjectPreviewViewController.swift */; };
+		DFEA4F202AF9914500982244 /* TMDBObjectPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEA4F1F2AF9914500982244 /* TMDBObjectPreviewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		DF8201B92AF6DA0F00F92151 /* TMDBObjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBObjectViewModel.swift; sourceTree = "<group>"; };
 		DF8201BB2AF6EE8D00F92151 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		DFEA4F192AF97D2F00982244 /* YoutubeSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeSearchResponse.swift; sourceTree = "<group>"; };
+		DFEA4F1D2AF98BD900982244 /* TMDBObjectPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBObjectPreviewViewController.swift; sourceTree = "<group>"; };
+		DFEA4F1F2AF9914500982244 /* TMDBObjectPreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBObjectPreviewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				DF8201B92AF6DA0F00F92151 /* TMDBObjectViewModel.swift */,
+				DFEA4F1F2AF9914500982244 /* TMDBObjectPreviewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				DF8201BB2AF6EE8D00F92151 /* SearchResultsViewController.swift */,
+				DFEA4F1D2AF98BD900982244 /* TMDBObjectPreviewViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -266,7 +272,9 @@
 				DF8201AD2AF61A4D00F92151 /* Extensions.swift in Sources */,
 				DF8201842AF0D16100F92151 /* SceneDelegate.swift in Sources */,
 				DF8201992AF0D41800F92151 /* UpcomingViewController.swift in Sources */,
+				DFEA4F1E2AF98BD900982244 /* TMDBObjectPreviewViewController.swift in Sources */,
 				DF8201AB2AF6170500F92151 /* TMDBObject.swift in Sources */,
+				DFEA4F202AF9914500982244 /* TMDBObjectPreviewViewModel.swift in Sources */,
 				DF8201972AF0D3C700F92151 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
