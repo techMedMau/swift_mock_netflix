@@ -17,6 +17,9 @@ enum Sections: Int {
 
 class HomeViewController: UIViewController {
     
+    private var randomTrendingMovie: TMDBObject?
+    private var headerView: HeroHeaderUIView?
+    
     let sectionTitles: [String] = ["Trending Movies", "Trending TV", "Popular", "Upcoming Movies", "Top Rated"]
     
     private let homeFeedTable: UITableView = {
@@ -37,8 +40,22 @@ class HomeViewController: UIViewController {
         //generate nav bar with Netflix logo + profile & play icons
         configureNavBar()
         
-        let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
+        headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
+        configureHeroHeaderView()
+    }
+    
+    private func configureHeroHeaderView() {
+        APICaller.shared.getPopularMovies { [weak self] result in
+            switch result {
+            case .success(let TMDBObjects):
+                let selectedTMDBObject = TMDBObjects.randomElement()
+                self?.randomTrendingMovie = selectedTMDBObject
+                self?.headerView?.configure(with: TMDBObjectViewModel(titleName: selectedTMDBObject?.original_title ?? "", posterURL: selectedTMDBObject?.poster_path ?? ""))
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     private func configureNavBar() {
