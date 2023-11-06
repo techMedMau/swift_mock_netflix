@@ -27,6 +27,7 @@
 		DF8201B82AF6D41100F92151 /* TMDBObejectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8201B72AF6D41100F92151 /* TMDBObejectTableViewCell.swift */; };
 		DF8201BA2AF6DA0F00F92151 /* TMDBObjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8201B92AF6DA0F00F92151 /* TMDBObjectViewModel.swift */; };
 		DF8201BC2AF6EE8D00F92151 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8201BB2AF6EE8D00F92151 /* SearchResultsViewController.swift */; };
+		DFEA4F1A2AF97D2F00982244 /* YoutubeSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEA4F192AF97D2F00982244 /* YoutubeSearchResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		DF8201B72AF6D41100F92151 /* TMDBObejectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBObejectTableViewCell.swift; sourceTree = "<group>"; };
 		DF8201B92AF6DA0F00F92151 /* TMDBObjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBObjectViewModel.swift; sourceTree = "<group>"; };
 		DF8201BB2AF6EE8D00F92151 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		DFEA4F192AF97D2F00982244 /* YoutubeSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeSearchResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				DF8201AA2AF6170500F92151 /* TMDBObject.swift */,
+				DFEA4F192AF97D2F00982244 /* YoutubeSearchResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				DF82019E2AF0D4EB00F92151 /* DownloadsViewController.swift in Sources */,
 				DF8201BC2AF6EE8D00F92151 /* SearchResultsViewController.swift in Sources */,
 				DF8201822AF0D16100F92151 /* AppDelegate.swift in Sources */,
+				DFEA4F1A2AF97D2F00982244 /* YoutubeSearchResponse.swift in Sources */,
 				DF8201AD2AF61A4D00F92151 /* Extensions.swift in Sources */,
 				DF8201842AF0D16100F92151 /* SceneDelegate.swift in Sources */,
 				DF8201992AF0D41800F92151 /* UpcomingViewController.swift in Sources */,
