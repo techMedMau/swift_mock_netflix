@@ -9,9 +9,9 @@ import UIKit
 
 class SearchResultsViewController: UIViewController {
     
-    private var TMDBObjects: [TMDBObject] = [TMDBObject]()
+    public var TMDBObjects: [TMDBObject] = [TMDBObject]()
     
-    private let searchResultsCollectionView: UICollectionView = {
+    public let searchResultsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: UIScreen.main.bounds.width/3 - 10, height: 200)
         layout.minimumInteritemSpacing = 0
@@ -40,12 +40,16 @@ class SearchResultsViewController: UIViewController {
 
 extension SearchResultsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return TMDBObjects.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TMDBCollectionViewCell.identifier, for: indexPath) as? TMDBCollectionViewCell else { return UICollectionViewCell() }
-        cell.backgroundColor = .blue
+        
+        let TMDBObject = TMDBObjects[indexPath.row]
+        
+        cell.configure(with: TMDBObject.poster_path ?? "")
+        
         return cell
     }
     
