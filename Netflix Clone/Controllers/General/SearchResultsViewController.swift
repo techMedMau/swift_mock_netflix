@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol SearchResultsViewControllerDelegate: AnyObject {
+    func SearchResultsViewControllerDidTapItem(_ viewModel: TMDBObjectPreviewViewModel)
+}
+
 class SearchResultsViewController: UIViewController {
     
     public var TMDBObjects: [TMDBObject] = [TMDBObject]()
+    
+    public weak var delegate: SearchResultsViewControllerDelegate?
     
     public let searchResultsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -53,5 +59,20 @@ extension SearchResultsViewController: UICollectionViewDelegate, UICollectionVie
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
+        let TMDBObject = TMDBObjects[indexPath.row]
+        guard let TMDBObjectName = TMDBObject.original_title ?? TMDBObject.original_name else { return }
+        
+        APICaller.shared.getMovie(with: TMDBObjectName) { [weak self] result in
+            switch result {
+            case .success(let videoElement):
+                self?.delegate?.SearchResultsViewControllerDidTapItem(TMDBObjectPreviewViewModel(title: TMDBObject.original_title ?? "", youtubeView: videoElement, tileOverview: TMDBObject.overview ?? ""))
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+            
+        }
+    }
 }
